@@ -18,7 +18,9 @@ export default function InfoButton() {
         <p className="mx-2 my-2">
           Hello bijan
           <br />
-          this is a personal project why did you make this?
+          <span className="mx-2 my-2">
+            this is a personal project why did you make this?
+          </span>
         </p>
       </div>
       <div className="absolute bottom-4 right-4 hover:cursor-pointer">
