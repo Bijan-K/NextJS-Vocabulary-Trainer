@@ -1,6 +1,5 @@
 import Layout from '@/components/Layout';
 import MainHolder from '@/components/MainHolder';
-import InfoButton from '@/components/InfoButton';
 import ButtonHolder from '@/components/ButtonHolder';
 
 export default function Home() {
@@ -8,7 +7,6 @@ export default function Home() {
     <Layout>
       <ButtonHolder />
       <MainHolder />
-      <InfoButton />
     </Layout>
   );
 }
