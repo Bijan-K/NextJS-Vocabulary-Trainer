@@ -10,14 +10,14 @@ export default function MainHolder() {
   };
   return (
     <div
-      className="w-full h-full bg-slate-600 flex items-center justify-center cursor-pointer"
+      className="w-full h-full bg-slate-600 flex items-center justify-center cursor-crosshair"
       onClick={test}
     >
       <div
         className=" shadow shadow-orange-100 rounded-xl bg-slate-700 px-24 py-[20px]"
         onClick={test2}
       >
-        <span className="text-white text-8xl">infrignable</span>
+        <span className="text-white text-8xl cursor-grab">infrignable</span>
       </div>
     </div>
   );
