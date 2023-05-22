@@ -1,12 +1,10 @@
 export default function MainHolder() {
   const test = (event) => {
     event.preventDefault();
-    console.log('sdf');
   };
 
   const test2 = (event) => {
     event.stopPropagation();
-    console.log('ds');
   };
   return (
     <div
