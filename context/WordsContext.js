@@ -1,20 +1,24 @@
-import { createContext } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 const WordsContext = createContext();
 
-export const WordsProvider = ({ children, events }) => {
-  console.log(events);
-  return <WordsContext.Provider value={{}}>{children}</WordsContext.Provider>;
-};
+export const WordsProvider = ({ children }) => {
+  const [data, setData] = useState([]);
 
-export async function getStaticProps() {
-  const res = await fetch(`http://localhost:3000/api/events`);
-  const events = await res.json();
-
-  return {
-    props: { events: events.slice(0, 3) },
-    revalidate: 1,
+  const fetchData = async () => {
+    const response = await fetch('/api/');
+    const data = await response.json();
+    setData(data);
+    console.log(data);
   };
-}
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return (
+    <WordsContext.Provider value={{ data }}>{children}</WordsContext.Provider>
+  );
+};
 
 export default WordsContext;

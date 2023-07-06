@@ -1,14 +1,16 @@
 import Layout from '@/components/Layout';
-import MainHolder from '@/components/MainHolder';
-import ButtonHolder from '@/components/ButtonHolder';
-import ListContainer from '@/components/listBox/ListContainer';
+import MainDisplay from '@/components/MainDisplay';
+import ResetButton from '@/components/ResetButton';
+import MenuButton from '@/components/MenuButton';
+import MainButtonsContainer from '@/components/MainButtonsContainer';
 
 export default function Home() {
   return (
     <Layout>
-      <ButtonHolder />
-      <MainHolder />
-      <ListContainer />
+      <MenuButton />
+      <ResetButton />
+      <MainDisplay />
+      <MainButtonsContainer />
     </Layout>
   );
 }
