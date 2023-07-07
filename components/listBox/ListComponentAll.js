@@ -1,16 +1,23 @@
 import WordsContext from '@/context/WordsContext';
 import { useContext } from 'react';
 
-export default function ListComponentAll({ word, key }) {
+export default function ListComponentAll({ word, itemIndex }) {
   const { index } = useContext(WordsContext);
 
+  const clickHandler = () => {
+    window
+      .open(`https://www.google.com/search?q=define+${word}`, '_blank')
+      .focus();
+  };
+
   return (
-    <div
+    <button
+      onClick={clickHandler}
       className={`${
-        key > index ? 'text-white' : 'text-gray-600'
-      }   p-3 text-center border-b-2 mx-5`}
+        itemIndex >= index ? 'text-white' : 'text-gray-400'
+      }   p-3 text-center border-b-2 mx-5 `}
     >
       {word}
-    </div>
+    </button>
   );
 }

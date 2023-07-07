@@ -41,21 +41,3 @@ export const WordsProvider = ({ children }) => {
 };
 
 export default WordsContext;
-
-// local storage code
-// if (typeof window !== 'undefined') {
-//   if (localStorage.getItem('SubjectSelect99Save')) {
-//     let SaveInStore = JSON.parse(
-//       localStorage.getItem('SubjectSelect99Save')
-//     );
-//     SetDone(false);
-//     SetSave(SaveInStore);
-//   }
-// }
-
-// const clickHandlerForSaveOnLocalStorage = (e) => {
-//   e.preventDefault();
-//   let SaveInString = JSON.stringify(Save);
-//   localStorage.setItem('SubjectSelect99Save', SaveInString);
-//   SetSaveWasClicked(true);
-// };

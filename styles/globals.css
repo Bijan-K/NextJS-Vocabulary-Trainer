@@ -109,3 +109,12 @@ a {
     color-scheme: dark;
   }
 }
+
+::-webkit-scrollbar {
+  background: #030739;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eee;
+}

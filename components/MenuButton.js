@@ -7,7 +7,6 @@ export default function MenuButton() {
 
   const clickHandler = () => {
     setShowList(true);
-    console.log(showList);
   };
 
   return (
