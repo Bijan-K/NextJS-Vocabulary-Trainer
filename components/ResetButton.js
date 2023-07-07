@@ -2,11 +2,12 @@ import WordsContext from '@/context/WordsContext';
 import { useContext } from 'react';
 
 export default function ResetButton() {
-  const { setIndex, setWord, data } = useContext(WordsContext);
+  const { setIndex, setWord, data, setWrongList } = useContext(WordsContext);
 
   const clickHandler = () => {
     setIndex(0);
     setWord(data[0]);
+    setWrongList([]);
   };
 
   return (

@@ -6,7 +6,7 @@ export const WordsProvider = ({ children }) => {
   const [data, setData] = useState([]);
   const [index, setIndex] = useState(0);
   const [wrongList, setWrongList] = useState([]);
-  const [showList, setShowList] = useState(true);
+  const [showList, setShowList] = useState(false);
   const [word, setWord] = useState('NaN');
 
   const fetchData = async () => {
