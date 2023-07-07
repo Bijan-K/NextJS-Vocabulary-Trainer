@@ -6,7 +6,7 @@ export const WordsProvider = ({ children }) => {
   const [data, setData] = useState([]);
   const [index, setIndex] = useState(0);
   const [wrongList, setWrongList] = useState([]);
-  const [showList, setShowList] = useState(false);
+  const [showList, setShowList] = useState(true);
   const [word, setWord] = useState('NaN');
 
   const fetchData = async () => {
@@ -23,7 +23,17 @@ export const WordsProvider = ({ children }) => {
 
   return (
     <WordsContext.Provider
-      value={{ data, word, index, wrongList, setWrongList, setIndex, setWord }}
+      value={{
+        showList,
+        data,
+        word,
+        index,
+        wrongList,
+        setWrongList,
+        setIndex,
+        setWord,
+        setShowList,
+      }}
     >
       {children}
     </WordsContext.Provider>
