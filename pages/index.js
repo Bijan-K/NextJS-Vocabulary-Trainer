@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <Layout>
-      {<ListContainer /> && showList}
+      {showList ? <ListContainer /> : null}
       <MenuButton />
       <ResetButton />
       <MainDisplay />
