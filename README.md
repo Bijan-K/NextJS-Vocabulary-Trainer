@@ -1,4 +1,5 @@
-![Cool ](https://github.com/Bijan-K/NextJS-Vocabulary-Trainer/assets/80640045/17c4f406-f905-4c44-b7ea-e1de8da036f9)
+![image](https://github.com/Bijan-K/NextJS-Vocabulary-Trainer/assets/80640045/2581274b-c7f9-46aa-8d94-069d2c55407b)
+
 
 ## intruduction
 
