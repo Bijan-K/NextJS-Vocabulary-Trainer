@@ -43,7 +43,7 @@ refuse
 strength
 approval
 approve
-enshussssim
+enthusiasm
 undisputed
 resolute
 free
@@ -206,7 +206,6 @@ dwellers
 fractures
 exhibits
 facilitated
-suspended
 afford
 implements
 diversification
@@ -479,7 +478,7 @@ generated
 extensive
 adjacent
 composed 
-suspendedselspilneded
+splendid
 persistent
 skeptical
 devours
@@ -651,7 +650,6 @@ contrivance
 deterioration
 excess
 unassailable
-faults
 recklessness
 destruction
 cowardice
@@ -781,7 +779,6 @@ deterioration
 excess
 disturb
 unassailable
-faults
 recklessness
 destruction
 cowardice
@@ -812,7 +809,7 @@ indicate
 legislation
 acquisition
 exposure
-commission
+Commission
 distinction
 institute
 propulsion
