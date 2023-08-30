@@ -1,24 +1,25 @@
 import { createContext, useEffect, useState } from 'react';
+import { DefaultData } from './Default';
 
 const WordsContext = createContext();
 
 export const WordsProvider = ({ children }) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({ Default: DefaultData, Mistakes: [] });
   const [index, setIndex] = useState(0);
   const [wrongList, setWrongList] = useState([]);
   const [showList, setShowList] = useState(false);
   const [word, setWord] = useState('NaN');
+  const [currentListName, setCurrentListName] = useState('Default');
 
-  const fetchData = async () => {
-    const response = await fetch('/api/');
-    const data = await response.json();
+  const setWords = (data) => {
+    console.log(data);
     data.sort(() => Math.random() - 0.5);
-    setData(data);
     setWord(data[index]);
   };
 
   useEffect(() => {
-    fetchData();
+    setWords(data.Default);
+    setIndex(0);
   }, []);
 
   return (
