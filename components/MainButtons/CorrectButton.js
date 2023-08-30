@@ -3,10 +3,11 @@ import WordsContext from '@/context/WordsContext';
 import { useContext } from 'react';
 
 export default function CorrectButton() {
-  const { index, setIndex, setWord, data } = useContext(WordsContext);
+  const { index, setIndex, setWord, data, currentListName } =
+    useContext(WordsContext);
 
   const clickHandler = () => {
-    setWord(data[index + 1]);
+    setWord(data[currentListName][index + 1]);
     setIndex(index + 1);
   };
 

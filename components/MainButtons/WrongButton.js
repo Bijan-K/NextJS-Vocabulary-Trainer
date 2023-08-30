@@ -3,14 +3,21 @@ import WordsContext from '@/context/WordsContext';
 import { useContext } from 'react';
 
 export default function WrongButton() {
-  const { index, setIndex, setWord, data, setWrongList, wrongList } =
-    useContext(WordsContext);
+  const {
+    index,
+    setIndex,
+    setWord,
+    data,
+    setWrongList,
+    wrongList,
+    currentListName,
+  } = useContext(WordsContext);
 
   const clickHandler = () => {
     let temp = wrongList;
-    temp.push(data[index]);
+    temp.push(data[currentListName][index]);
     setWrongList(temp);
-    setWord(data[index + 1]);
+    setWord(data[currentListName][index + 1]);
     setIndex(index + 1);
   };
 
