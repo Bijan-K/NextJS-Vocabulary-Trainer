@@ -26,6 +26,7 @@ export const WordsProvider = ({ children }) => {
     <WordsContext.Provider
       value={{
         showList,
+        currentListName,
         data,
         word,
         index,

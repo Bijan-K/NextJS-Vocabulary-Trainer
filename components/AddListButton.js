@@ -9,7 +9,7 @@ export default function AddListButton() {
   };
 
   return (
-    <div className="fixed bottom-4 right-5 w-32 h-32 rounded-md bg-slate-800 grid grid-cols-1 place-items-center">
+    <div className="fixed text-center bottom-4 right-5 w-32 h-32 rounded-md bg-slate-800 grid grid-cols-1 place-items-center">
       <button
         onMouseLeave={hoverEffect}
         onMouseEnter={hoverEffect}

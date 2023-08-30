@@ -5,7 +5,10 @@ import ListComponentAll from './ListComponentAll';
 import ListComponentsMistake from './ListComponentsMistake';
 
 export default function ListContainer() {
-  const { index, setShowList, data, wrongList } = useContext(WordsContext);
+  const { index, setShowList, data, wrongList, currentListName } =
+    useContext(WordsContext);
+
+  let Data = data.currentListName;
 
   const clickHandler = () => {
     setShowList(false);
