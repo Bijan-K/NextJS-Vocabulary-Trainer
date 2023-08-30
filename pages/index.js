@@ -1,12 +1,11 @@
 import Layout from '@/components/Layout';
 import MainDisplay from '@/components/MainDisplay';
-import ResetButton from '@/components/ResetButton';
-import MenuButton from '@/components/MenuButton';
 import ListContainer from '@/components/MenuContainer/ListContainer';
 import MainButtonsContainer from '@/components/MainButtonsContainer';
 import WordsContext from '@/context/WordsContext';
 import TopButtonsContainer from '@/components/TopButtonsContainer';
 import { useContext } from 'react';
+import AddListButton from '@/components/AddListButton';
 
 export default function Home() {
   const { showList } = useContext(WordsContext);
@@ -17,6 +16,7 @@ export default function Home() {
       <TopButtonsContainer />
       <MainDisplay />
       <MainButtonsContainer />
+      <AddListButton />
     </Layout>
   );
 }
