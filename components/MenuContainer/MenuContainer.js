@@ -4,6 +4,7 @@ import { TfiSaveAlt } from 'react-icons/tfi';
 import WordsContext from '@/context/WordsContext';
 import { useContext } from 'react';
 import ListComponentAll from './MenuComponentAll';
+import * as FileSaver from 'file-saver';
 
 export default function ListContainer() {
   const { setShowMenu, data, setData, currentListName, setCurrentListName } =
@@ -17,13 +18,17 @@ export default function ListContainer() {
     }
   };
 
-  const clickHandler = () => {
-    setShowMenu(false);
+  const downloadList = () => {
+    const blob = new Blob([JSON.stringify(data[currentListName])], {
+      type: 'application/json',
+    });
+    FileSaver.saveAs(blob, `${currentListName}.json`);
   };
 
-  const changeTabs = () => {
-    const Alltab = document.querySelector('#all');
-    Alltab.classList.toggle('hidden');
+  const saveList = () => {};
+
+  const clickHandler = () => {
+    setShowMenu(false);
   };
 
   return (
@@ -43,10 +48,10 @@ export default function ListContainer() {
       {/* buttons */}
       <div className="flex gap-4 py-2 px-1 border-b">
         <button>
-          <BsDownload size={15} />
+          <BsDownload onClick={downloadList} size={15} />
         </button>
         <button>
-          <TfiSaveAlt size={15} />
+          <TfiSaveAlt onClick={saveList} size={15} />
         </button>
         <button onClick={removeList} className="ml-auto">
           <FaTrash color="red" size={15} />
