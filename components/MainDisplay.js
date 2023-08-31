@@ -18,7 +18,6 @@ export default function MainDisplay() {
         onClick={clickHandler}
         className=" translate-y-[-100px] shadow shadow-orange-100 rounded-xl bg-slate-700 px-24 py-[20px] cursor-pointer"
       >
-        {console.log(word)}
         <span className="text-white text-8xl">
           {word !== 'NaN' && word != undefined ? (
             word

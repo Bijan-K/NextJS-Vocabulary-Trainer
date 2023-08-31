@@ -8,15 +8,17 @@ export default function WrongButton() {
     setIndex,
     setWord,
     data,
+    setData,
     setWrongList,
     wrongList,
     currentListName,
   } = useContext(WordsContext);
 
   const clickHandler = () => {
-    let temp = wrongList;
-    temp.push(data[currentListName][index]);
-    setWrongList(temp);
+    let temp = data.Mistakes;
+    temp.push(data['Mistakes'][index]);
+    setData({ ...data, Mistakes: temp });
+    console.log(temp);
     setWord(data[currentListName][index + 1]);
     setIndex(index + 1);
   };

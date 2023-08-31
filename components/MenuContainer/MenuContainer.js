@@ -14,7 +14,6 @@ export default function ListContainer() {
       const { [currentListName]: deletedKey, ...rest } = data;
       setData(rest);
       setCurrentListName('none');
-      console.log(data);
     }
   };
 

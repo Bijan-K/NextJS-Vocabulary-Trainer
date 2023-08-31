@@ -1,12 +1,14 @@
 import { HiPlus } from 'react-icons/hi';
 import { useState } from 'react';
+import WordsContext from '@/context/WordsContext';
+import { useContext } from 'react';
 
 export default function AddListButton() {
+  const { data, setData } = useContext(WordsContext);
+
   const [buttonSize, setButtonSize] = useState(40);
   const [fileName, setFileName] = useState('');
   const [fileContent, setFileContent] = useState('');
-
-  const addNewList = () => {};
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
@@ -14,14 +16,13 @@ export default function AddListButton() {
       setFileName(file.name);
       const reader = new FileReader();
       reader.onload = (event) => {
-        setFileContent(event.target.result);
+        setFileContent(event.target.result.split('\n'));
+        setData({ ...data, [fileName]: fileContent });
       };
       reader.readAsText(file);
     } else {
       alert('Please upload a .txt file.');
     }
-
-    addNewList();
   };
 
   const hoverEffect = () => {
