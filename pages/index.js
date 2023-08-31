@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import MainDisplay from '@/components/MainDisplay';
-import ListContainer from '@/components/MenuContainer/ListContainer';
+import ListContainer from '@/components/MenuContainer/MenuContainer';
 import MainButtonsContainer from '@/components/MainButtonsContainer';
 import WordsContext from '@/context/WordsContext';
 import TopButtonsContainer from '@/components/TopButtonsContainer';
@@ -9,11 +9,11 @@ import AddListButton from '@/components/AddListButton';
 import GuideCard from '@/components/GuideCard';
 
 export default function Home() {
-  const { ShowMenu } = useContext(WordsContext);
+  const { showMenu } = useContext(WordsContext);
 
   return (
     <Layout>
-      {ShowMenu ? <ListContainer /> : null}
+      {showMenu ? <ListContainer /> : null}
       <TopButtonsContainer />
       <MainDisplay />
       <MainButtonsContainer />

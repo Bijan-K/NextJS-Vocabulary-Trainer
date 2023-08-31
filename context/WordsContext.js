@@ -13,7 +13,6 @@ export const WordsProvider = ({ children }) => {
   const [lists, setLists] = useState([]);
 
   const setWords = (data) => {
-    console.log(data);
     data.sort(() => Math.random() - 0.5);
     setWord(data[index]);
   };
