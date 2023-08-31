@@ -7,9 +7,10 @@ export const WordsProvider = ({ children }) => {
   const [data, setData] = useState({ Default: DefaultData, Mistakes: [] });
   const [index, setIndex] = useState(0);
   const [wrongList, setWrongList] = useState([]);
-  const [showList, setShowList] = useState(false);
   const [word, setWord] = useState('NaN');
   const [currentListName, setCurrentListName] = useState('Default');
+  const [showMenu, setShowMenu] = useState(false);
+  const [lists, setLists] = useState([]);
 
   const setWords = (data) => {
     console.log(data);
@@ -20,12 +21,14 @@ export const WordsProvider = ({ children }) => {
   useEffect(() => {
     setWords(data.Default);
     setIndex(0);
+    setLists(Object.keys(data));
   }, []);
 
   return (
     <WordsContext.Provider
       value={{
-        showList,
+        showMenu,
+        lists,
         currentListName,
         data,
         word,
@@ -34,7 +37,7 @@ export const WordsProvider = ({ children }) => {
         setWrongList,
         setIndex,
         setWord,
-        setShowList,
+        setShowMenu,
       }}
     >
       {children}

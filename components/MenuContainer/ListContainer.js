@@ -5,13 +5,13 @@ import ListComponentAll from './ListComponentAll';
 import ListComponentsMistake from './ListComponentsMistake';
 
 export default function ListContainer() {
-  const { index, setShowList, data, wrongList, currentListName } =
+  const { index, setShowMenu, data, wrongList, currentListName } =
     useContext(WordsContext);
 
   let Data = data.currentListName;
 
   const clickHandler = () => {
-    setShowList(false);
+    setShowMenu(false);
   };
 
   const changeTabs = () => {

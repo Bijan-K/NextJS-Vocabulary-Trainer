@@ -3,10 +3,10 @@ import WordsContext from '@/context/WordsContext';
 import { useContext } from 'react';
 
 export default function MenuButton() {
-  const { setShowList, showList } = useContext(WordsContext);
+  const { setShowMenu, ShowMenu } = useContext(WordsContext);
 
   const clickHandler = () => {
-    setShowList(true);
+    setShowMenu(true);
   };
 
   return (

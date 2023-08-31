@@ -9,11 +9,11 @@ import AddListButton from '@/components/AddListButton';
 import GuideCard from '@/components/GuideCard';
 
 export default function Home() {
-  const { showList } = useContext(WordsContext);
+  const { ShowMenu } = useContext(WordsContext);
 
   return (
     <Layout>
-      {showList ? <ListContainer /> : null}
+      {ShowMenu ? <ListContainer /> : null}
       <TopButtonsContainer />
       <MainDisplay />
       <MainButtonsContainer />
