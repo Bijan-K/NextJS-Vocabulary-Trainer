@@ -10,13 +10,15 @@ export default function TopButton({ name, index }) {
     setWrongList([]);
   };
 
-  return name != 'Mistakes' ? (
+  return name != 'Mistakes' && name != 'none' ? (
     <button className="text-center bg-black text-white px-2 py-1 rounded-lg font-semibold shadow-slate-800 shadow active:bg-slate-800">
       {name}
     </button>
-  ) : (
+  ) : name != 'none' ? (
     <button className="text-center bg-black text-rose-400 px-2 py-1 rounded-lg font-semibold shadow-slate-800 shadow active:bg-slate-800">
       {name}
     </button>
+  ) : (
+    <button></button>
   );
 }

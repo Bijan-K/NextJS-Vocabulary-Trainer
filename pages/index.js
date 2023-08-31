@@ -5,7 +5,7 @@ import MainButtonsContainer from '@/components/MainButtonsContainer';
 import WordsContext from '@/context/WordsContext';
 import TopButtonsContainer from '@/components/TopButtonsContainer';
 import { useContext } from 'react';
-import AddListButton from '@/components/AddListButton';
+import AddListButton from '@/components/AddWordListButton';
 import GuideCard from '@/components/GuideCard';
 
 export default function Home() {

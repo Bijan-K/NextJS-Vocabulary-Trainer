@@ -18,8 +18,13 @@ export default function MainDisplay() {
         onClick={clickHandler}
         className=" translate-y-[-100px] shadow shadow-orange-100 rounded-xl bg-slate-700 px-24 py-[20px] cursor-pointer"
       >
+        {console.log(word)}
         <span className="text-white text-8xl">
-          {word !== 'NaN' ? word : <MdOutlineDownloading size={24} />}
+          {word !== 'NaN' && word != undefined ? (
+            word
+          ) : (
+            <MdOutlineDownloading size={50} />
+          )}
           {index > data.length ? <GiFinishLine size={24} color="green" /> : ''}
         </span>
       </div>

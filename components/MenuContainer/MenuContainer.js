@@ -6,12 +6,17 @@ import { useContext } from 'react';
 import ListComponentAll from './MenuComponentAll';
 
 export default function ListContainer() {
-  const { index, setShowMenu, data, wrongList, currentListName } =
+  const { setShowMenu, data, setData, currentListName, setCurrentListName } =
     useContext(WordsContext);
 
-  let Data = data[currentListName];
-
-  const removeList = () => {};
+  const removeList = () => {
+    if (currentListName != 'none') {
+      const { [currentListName]: deletedKey, ...rest } = data;
+      setData(rest);
+      setCurrentListName('none');
+      console.log(data);
+    }
+  };
 
   const clickHandler = () => {
     setShowMenu(false);
@@ -44,7 +49,7 @@ export default function ListContainer() {
         <button>
           <TfiSaveAlt size={15} />
         </button>
-        <button clickHandler={removeList} className="ml-auto">
+        <button onClick={removeList} className="ml-auto">
           <FaTrash color="red" size={15} />
         </button>
       </div>
@@ -52,7 +57,7 @@ export default function ListContainer() {
       {/* Components */}
       <div className="w-full h-full border-white overflow-scroll pb-10 mt-2">
         <div id="all" className="flex gap-2 flex-col ">
-          {Data.map((item, index, key) => {
+          {data[currentListName].map((item, index, key) => {
             return (
               <ListComponentAll word={item} itemIndex={index} key={index} />
             );
