@@ -4,25 +4,21 @@ import WordsContext from '@/context/WordsContext';
 import { useContext } from 'react';
 
 export default function AddListButton() {
-  const { data, setData } = useContext(WordsContext);
+  const { data, setData, setCurrentListName } = useContext(WordsContext);
 
   const [buttonSize, setButtonSize] = useState(40);
-  const [fileName, setFileName] = useState('');
-  const [fileContent, setFileContent] = useState('');
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
-    if (file.type === 'text/plain') {
-      setFileName(file.name);
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        setFileContent(event.target.result.split('\n'));
-        setData({ ...data, [fileName]: fileContent });
-      };
-      reader.readAsText(file);
-    } else {
-      alert('Please upload a .txt file.');
-    }
+    let FileName = file.name.split('.txt')[0];
+    let FileContent;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      FileContent = event.target.result.split('\n');
+      setData({ ...data, [FileName]: FileContent });
+      setCurrentListName(FileName);
+    };
+    reader.readAsText(file);
   };
 
   const hoverEffect = () => {
