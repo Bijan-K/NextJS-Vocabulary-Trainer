@@ -15,6 +15,7 @@ export const WordsProvider = ({ children }) => {
   const [currentListName, setCurrentListName] = useState('Default');
   const [showMenu, setShowMenu] = useState(false);
   const [lists, setLists] = useState([]);
+  const [saveWords, setSaveWords] = useState({});
 
   const setWords = (wordsIndata) => {
     wordsIndata.sort(() => Math.random() - 0.5);
@@ -24,6 +25,12 @@ export const WordsProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    if (localStorage.getItem('SavedWords')) {
+      localStorage.getItem('SavedWords');
+      console.log('it is here');
+    } else {
+      console.log('nothing');
+    }
     setWords(data.Default);
   }, []);
 

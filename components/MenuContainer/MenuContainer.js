@@ -25,7 +25,13 @@ export default function ListContainer() {
     FileSaver.saveAs(blob, `${currentListName}.json`);
   };
 
-  const saveList = () => {};
+  const saveList = () => {
+    console.log(currentListName);
+    console.log(data[currentListName]);
+    let object = { savedwords: { [currentListName]: data[currentListName] } };
+    console.log(object);
+    // localStorage.setItem('SavedWords', object);
+  };
 
   const clickHandler = () => {
     setShowMenu(false);
