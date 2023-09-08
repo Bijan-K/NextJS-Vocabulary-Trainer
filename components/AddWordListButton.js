@@ -4,7 +4,8 @@ import WordsContext from '@/context/WordsContext';
 import { useContext } from 'react';
 
 export default function AddListButton() {
-  const { data, setData, setCurrentListName } = useContext(WordsContext);
+  const { data, setData, setCurrentListName, saveWords, setSaveWords } =
+    useContext(WordsContext);
 
   const [buttonSize, setButtonSize] = useState(40);
 

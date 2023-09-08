@@ -21,22 +21,25 @@ export const WordsProvider = ({ children }) => {
     wordsIndata.sort(() => Math.random() - 0.5);
     setWord(wordsIndata[index]);
     setIndex(0);
-    setLists(Object.keys(data));
   };
 
   useEffect(() => {
     if (localStorage.getItem('SavedWords')) {
-      localStorage.getItem('SavedWords');
-      console.log('it is here');
+      // localStorage.setItem('SavedWords', '{}');
+      let save = JSON.parse(localStorage.getItem('SavedWords'));
+      console.log(save);
+      setData({ ...data, ...save });
+      setSaveWords(save);
     } else {
-      console.log('nothing');
+      localStorage.setItem('SavedWords', '{}');
     }
-    setWords(data.Default);
   }, []);
 
   useEffect(() => {
     setWords(data[currentListName]);
-  }, [currentListName]);
+    setLists(Object.keys(data));
+    console.log(data);
+  }, [currentListName, data]);
 
   return (
     <WordsContext.Provider
@@ -47,6 +50,8 @@ export const WordsProvider = ({ children }) => {
         data,
         word,
         index,
+        saveWords,
+        setSaveWords,
         setIndex,
         setWord,
         setShowMenu,

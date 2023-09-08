@@ -7,13 +7,25 @@ import ListComponentAll from './MenuComponentAll';
 import * as FileSaver from 'file-saver';
 
 export default function ListContainer() {
-  const { setShowMenu, data, setData, currentListName, setCurrentListName } =
-    useContext(WordsContext);
+  const {
+    setShowMenu,
+    data,
+    setData,
+    currentListName,
+    setCurrentListName,
+    saveWords,
+    setSaveWords,
+  } = useContext(WordsContext);
 
   const removeList = () => {
     if (currentListName != 'none') {
       const { [currentListName]: deletedKey, ...rest } = data;
       setData(rest);
+
+      const { [currentListName]: deletedKey2, ...rest2 } = saveWords;
+      setSaveWords(rest2);
+
+      localStorage.setItem('SavedWords', JSON.stringify(rest2));
       setCurrentListName('none');
     }
   };
@@ -26,11 +38,10 @@ export default function ListContainer() {
   };
 
   const saveList = () => {
-    console.log(currentListName);
-    console.log(data[currentListName]);
-    let object = { savedwords: { [currentListName]: data[currentListName] } };
-    console.log(object);
-    // localStorage.setItem('SavedWords', object);
+    let object = { [currentListName]: data[currentListName] };
+    setSaveWords({ ...saveWords, object });
+    object = { ...saveWords, ...object };
+    localStorage.setItem('SavedWords', JSON.stringify(object));
   };
 
   const clickHandler = () => {
