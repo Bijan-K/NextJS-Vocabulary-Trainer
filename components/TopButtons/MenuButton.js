@@ -14,7 +14,7 @@ export default function MenuButton() {
       onClick={clickHandler}
       className="p-1 active:border active:border-black rounded-md"
     >
-      <AiOutlineMenuUnfold size={32} color="black" />
+      <AiOutlineMenuUnfold size={36} color="black" />
     </button>
   );
 }

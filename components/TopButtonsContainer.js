@@ -9,7 +9,7 @@ export default function TopButtonsContainer() {
   const { lists } = useContext(WordsContext);
 
   return (
-    <div className="fixed gap-2 flex top-3 left-3 p-1">
+    <div className="fixed gap-2 flex top-3 left-3 p-1 landscape:flex-row flex-col">
       <MenuButton />
       {lists.map((name, index) => {
         return <TopButton name={name} key={index} />;

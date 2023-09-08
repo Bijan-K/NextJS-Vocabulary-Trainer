@@ -15,7 +15,7 @@ export default function ListComponentAll({ word, itemIndex }) {
       onClick={clickHandler}
       className={`${
         itemIndex >= index ? 'text-white' : 'text-gray-400'
-      }   p-3 text-center border-b-2 mx-5 `}
+      }   p-3 text-center border-b-2 mx-5 landscape:text-base text-xl `}
     >
       {word}
     </button>
