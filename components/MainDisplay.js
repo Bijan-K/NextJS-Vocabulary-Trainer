@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import WordsContext from '@/context/WordsContext';
-import { MdOutlineDownloading } from 'react-icons/md';
+import { ImFileEmpty } from 'react-icons/im';
 import { GiFinishLine } from 'react-icons/gi';
 
 export default function MainDisplay() {
@@ -22,7 +22,7 @@ export default function MainDisplay() {
           {word !== 'NaN' && word != undefined ? (
             word
           ) : (
-            <MdOutlineDownloading size={50} />
+            <ImFileEmpty size={80} />
           )}
           {index > data.length ? <GiFinishLine size={24} color="green" /> : ''}
         </span>
