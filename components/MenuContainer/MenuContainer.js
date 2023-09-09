@@ -65,7 +65,7 @@ export default function ListContainer() {
         </div>
       </div>
       {/* buttons */}
-      <div className="flex gap-4  py-2 px-1 h-10 landscape:h-min border-b">
+      <div className="flex gap-4  py-2 px-1 h-10 border-b">
         <button>
           <BsDownload onClick={downloadList} size={'auto'} />
         </button>
