@@ -21,8 +21,10 @@ export default function GuideCard() {
         <br />
         word3
         <br />
-        you can also save your word set in your browser's storage using the save
-        function in the menu.
+        <span>
+          you can also save your wordset in your browser&apos;s storage using
+          the save function in the menu.
+        </span>
       </div>
     )
   );
