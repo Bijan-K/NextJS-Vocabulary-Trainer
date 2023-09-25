@@ -27,7 +27,7 @@ export default function AddListButton() {
   };
 
   return (
-    <div className="fixed text-center bottom-4 right-1/2 translate-x-1/2 landscape:translate-x-0 landscape:right-5 w-32 h-32 rounded-md bg-slate-800 grid grid-cols-1 place-items-center">
+    <div className="fixed text-center top-4 right-4 landscape:top-auto landscape:bottom-5 landscape:right-5 w-20 h-20 landscape:w-32 landscape:h-32 rounded-md bg-slate-800 grid grid-cols-1 place-items-center">
       <button
         onClick={() => document.getElementById('fileInput').click()}
         onMouseLeave={hoverEffect}

@@ -40,8 +40,9 @@ export default function ListContainer() {
   };
 
   const saveList = () => {
-    let object = { [currentListName]: data[currentListName] };
-    setSaveWords({ ...saveWords, object });
+    let object = {};
+    object = { [currentListName]: data[currentListName] };
+    setSaveWords({ ...saveWords, ...object });
     object = { ...saveWords, ...object };
     localStorage.setItem('SavedWords', JSON.stringify(object));
   };

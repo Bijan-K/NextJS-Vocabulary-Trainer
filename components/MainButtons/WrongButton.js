@@ -8,10 +8,8 @@ export default function WrongButton() {
 
   const clickHandler = () => {
     let temp = data.Mistakes;
-    console.log(data.Mistakes);
     temp.push(data[currentListName][index]);
     setData({ ...data, Mistakes: temp });
-    console.log(temp);
     setWord(data[currentListName][index + 1]);
     setIndex(index + 1);
   };

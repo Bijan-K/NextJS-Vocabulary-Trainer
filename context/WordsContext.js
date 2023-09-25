@@ -27,7 +27,6 @@ export const WordsProvider = ({ children }) => {
     if (localStorage.getItem('SavedWords')) {
       // localStorage.setItem('SavedWords', '{}');
       let save = JSON.parse(localStorage.getItem('SavedWords'));
-      console.log(save);
       setData({ ...data, ...save });
       setSaveWords(save);
     } else {
@@ -38,7 +37,6 @@ export const WordsProvider = ({ children }) => {
   useEffect(() => {
     setWords(data[currentListName]);
     setLists(Object.keys(data));
-    console.log(data);
   }, [currentListName, data]);
 
   return (
