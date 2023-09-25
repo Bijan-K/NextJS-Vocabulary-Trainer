@@ -15,7 +15,7 @@ export default function CorrectButton() {
     <button
       title=""
       onClick={clickHandler}
-      className="bg-emerald-800 px-10 py-3 rounded-2xl active:bg-emerald-900"
+      className="bg-emerald-800 px-10 py-5 rounded-2xl active:bg-emerald-900"
     >
       <BsCheckAll size={24} />
     </button>

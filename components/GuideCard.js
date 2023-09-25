@@ -8,7 +8,7 @@ export default function GuideCard() {
 
   return (
     showGuide && (
-      <div className="fixed text-black bg-slate-400 p-4 rounded border border-black landscape:bottom-40 landscape:h-fit landscape:right-5 landscape:translate-x-0 landscape:w-48 landscape:text-base landscape:translate-y-0 right-1/2 translate-x-1/2 bottom-1/2 translate-y-1/2 max-h-[43%] w-4/5 text-2xl overflow-scroll">
+      <div className="fixed text-black bg-slate-400 p-4 rounded border-2 border-black landscape:bottom-40 landscape:h-fit landscape:right-5 landscape:translate-x-0 landscape:w-48 landscape:text-base landscape:translate-y-0 right-1/2 translate-x-1/2 bottom-1/2 translate-y-1/2 max-h-[43%] w-4/5 text-2xl overflow-scroll font-medium">
         <button onClick={clickHandler} className="absolute top-1 right-1">
           <BsXSquare />
         </button>
@@ -22,8 +22,8 @@ export default function GuideCard() {
         word3
         <br />
         <span>
-          you can also save your wordset in your browser&apos;s storage using
-          the save function in the menu.
+          you can save your wordset in your browser&apos;s storage using the
+          save function in the menu.
         </span>
       </div>
     )

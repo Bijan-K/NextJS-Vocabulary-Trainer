@@ -52,7 +52,7 @@ export default function ListContainer() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-3/4 landscape:w-1/5 h-screen bg-slate-900 z-10 opacity-95 p-1">
+    <div className="fixed top-0 left-0 w-3/4 landscape:w-1/5 h-screen bg-slate-900 z-10 opacity-95 p-1 ">
       {/* header */}
       <div className="flex border-b">
         <div className="flex gap-2 m-1">

@@ -16,7 +16,7 @@ export default function MainDisplay() {
     <div className="w-full h-full bg-slate-600 flex items-center justify-center">
       <div
         onClick={clickHandler}
-        className=" translate-y-[-100px] rounded-xl border-b-2 border-white landscape:px-24 py-5 px-6 cursor-pointer mx-2 bg-slate-700"
+        className=" translate-y-[-100px] rounded-xl border-b-2 border-white landscape:px-24 py-5 px-6 cursor-pointer mx-2 bg-slate-700 mt-24"
       >
         <span className="text-white landscape:text-8xl text-6xl min-w-min">
           {word !== 'NaN' && word != undefined ? (

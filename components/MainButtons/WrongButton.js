@@ -17,7 +17,7 @@ export default function WrongButton() {
   return (
     <button
       title=""
-      className=" bg-rose-800 px-10 py-6 rounded-2xl active:bg-rose-900"
+      className=" bg-rose-800 pl-10 pr-10 landscape:px-10 py-6 rounded-2xl active:bg-rose-900"
       onClick={clickHandler}
     >
       <BsXLg size={20} />
