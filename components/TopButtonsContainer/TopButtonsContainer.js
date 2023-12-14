@@ -1,5 +1,5 @@
-import MenuButton from './TopButtons/MenuButton';
-import TopButton from './TopButtons/TopButton';
+import MenuButton from './MenuButton';
+import TopButton from './TopButton';
 import WordsContext from '@/context/WordsContext';
 import { useContext } from 'react';
 

@@ -1,6 +1,6 @@
-import QuestionButton from './MainButtons/QuestionButton';
-import CorrectButton from './MainButtons/CorrectButton';
-import WrongButton from './MainButtons/WrongButton';
+import QuestionButton from './QuestionButton';
+import CorrectButton from './CorrectButton';
+import WrongButton from './WrongButton';
 
 export default function MainButtonsContainer() {
   return (
