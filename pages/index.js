@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import MainDisplay from '@/components/MainButtons/MainDisplay';
+import MainDisplay from '@/components/MainDisplay';
 import ListContainer from '@/components/MenuContainer/MenuContainer';
 import MainButtonsContainer from '@/components/MainButtons/MainButtonsContainer';
 import WordsContext from '@/context/WordsContext';
