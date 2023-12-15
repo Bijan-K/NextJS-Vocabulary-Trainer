@@ -1,13 +1,21 @@
 import { createContext, useEffect, useState } from 'react';
-import { DefaultData } from './Default';
+import { DefaultENData } from './DefaultEN';
+import { DefaultDUData } from './DefaultDU';
 
 const WordsContext = createContext();
 
 export const WordsProvider = ({ children }) => {
-  const [data, setData] = useState({
-    Default: DefaultData,
-    Mistakes: [],
-    none: ['empty list'],
+  const [Data, setData] = useState({
+    English: {
+      Default: DefaultENData,
+      Mistakes: [],
+      none: ['empty list'],
+    },
+    Dutch: {
+      Default: DefaultDUData,
+      Mistakes: [],
+      none: ['empty list'],
+    },
   });
 
   const [index, setIndex] = useState(0);

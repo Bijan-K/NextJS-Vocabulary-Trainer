@@ -1,4 +1,4 @@
-export const DefaultData = [
+export const DefaultENData = [
   'Debauchery',
   'perform',
   'energy',
